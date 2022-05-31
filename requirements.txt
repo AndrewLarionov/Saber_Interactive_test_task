@@ -1,1 +1,3 @@
 numexpr
+pyTelegramBotAPI
+python-decouple

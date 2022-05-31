@@ -1,9 +1,8 @@
-from typing import Union
 
 import numexpr as ne
 
 
-def calculate(input_string: str) -> Union[int, float, str]:
+def calculate(input_string: str) -> str:
     """
     Solves the equations
     :param input_string: string with equation
@@ -11,7 +10,7 @@ def calculate(input_string: str) -> Union[int, float, str]:
     """
     try:
         result = ne.evaluate(input_string)
-        return result
+        return str(result)
     except (KeyError, SyntaxError, TypeError):
         return 'Please enter an equation containing only numbers and ' \
                'operators without letters, emojis, double symbols, brackets, etc.'
